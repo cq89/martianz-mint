@@ -1,15 +1,160 @@
+:root {
+  --primary-hue: 150;
+  --primary-saturation: 100%;
+
+  --primary-neon: hsl(var(--primary-hue), var(--primary-saturation), 50%);
+  --primary-light: hsl(var(--primary-hue), var(--primary-saturation), 37%);
+  --primary-medium: hsl(var(--primary-hue), var(--primary-saturation), 25%);
+  --primary-dark: hsl(var(--primary-hue), var(--primary-saturation), 12%);
+
+  --primary-text: var(--primary-neon);
+  --background-primary: hsl(0, 0%, 38%);
+  --background-secondary: hsl(0, 0%, 0%);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  font-family: "Space Mono", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #303030;
-  color: #FFFFFF;
+  background-color: var(--background-primary);
+  color: #ffffff;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+ul {
+  list-style-type: none;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10%;
+}
+
+header {
+  width: 80%;
+  height: 10vh;
+  margin: auto;
+  background-color: var(--background-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4em;
+}
+
+header .logo {
+  filter: brightness(5) saturate(0);
+  width: 10em;
+  margin: 0;
+}
+
+.socials-menu ul {
+  display: flex;
+}
+
+.social-icon {
+  width: 2em;
+  margin: 0 .25em;
+}
+
+.logo {
+  width: clamp(20em, 60%, 400px);
+  height: auto;
+  object-fit: scale-down;
+  margin-bottom: 2rem;
+}
+
+.mockups-gif {
+  width: 200px;
+  margin-bottom: 2rem;
+}
+
+.collection-desc {
+  width: min(100%, 900px);
+  background-color: var(--primary-dark);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.collection-desc p {
+  margin-bottom: 1em;
+  text-align: center;
+  color: var(--primary-text)
+}
+
+.remaining {
+  margin-bottom: 1rem;
+}
+
+.roadmap-container {
+  counter-reset: bullets;
+  width: min(100%, 1400px);
+  margin-bottom: 4rem;
+}
+
+.roadmap-container h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 2rem;
+}
+
+.roadmap-bullet {
+  counter-increment: bullets;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.roadmap-bullet .phase-container {
+  background-color: var(--primary-medium);
+  padding: 1rem;
+}
+
+.roadmap-bullet .phase-container span {
+  display: flex;
+}
+
+.roadmap-bullet .phase-container span::after {
+  content: counter(bullets);
+  margin-left: .25em;
+}
+
+.roadmap-bullet .description-container {
+  width: 100%;
+  background-color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  padding: .2rem 1rem;
+}
+
+.roadmap-bullet .description-container span{
+  color: var(--primary-neon);
+}
+
+footer {
+  width: 100%;
+  font-size: 1.2em;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    font-size: 14px;
+  }
 }

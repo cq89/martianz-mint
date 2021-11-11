@@ -1,7 +1,8 @@
+import * as React from "react";
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Countdown from "react-countdown";
-import { Button, CircularProgress, Snackbar } from "@material-ui/core";
+import { Button, CircularProgress, colors, Snackbar } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
 
 import * as anchor from "@project-serum/anchor";
@@ -34,7 +35,100 @@ export interface HomeProps {
   startDate: number;
   treasury: anchor.web3.PublicKey;
   txTimeout: number;
+  twitter: string;
+  discord: string;
 }
+
+const Logo = () => {
+  return <img src="logo.png" alt="Logo" className="logo" />;
+};
+
+interface SocialLinkProps {
+  link: string;
+  icon: string;
+}
+
+const SocialLink: React.FC<SocialLinkProps> = ({ icon, link }) => {
+  return (
+    <a href={link}>
+      <img src={icon} alt="" className="social-icon" />
+    </a>
+  );
+};
+interface SocialMenuProps {
+  children: JSX.Element[];
+}
+
+const SocialMenu: React.FC<SocialMenuProps> = ({ children }) => {
+  //li for each social link
+  return (
+    <nav className="socials-menu">
+      <ul>
+        {children.map((icon) => (
+          <li>{icon}</li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
+
+interface HeaderProps {
+  twitter: string;
+  discord: string;
+}
+
+const Header: React.FC<HeaderProps> = ({twitter, discord}) => {
+  return (
+    <header>
+      <Logo />
+      <SocialMenu>
+        <SocialLink link={twitter} icon="twitter.svg" />
+        <SocialLink link={discord} icon="discord.svg" />
+      </SocialMenu>
+    </header>
+  );
+};
+
+const Footer = () => {
+  return (
+    <footer>
+      <h6>© 2021 Martianz</h6>
+    </footer>
+  );
+};
+
+interface RoadmapBulletProps {
+  desc: string;
+}
+
+const RoadmapBullet: React.FC<RoadmapBulletProps> = ({ desc }) => {
+  return (
+    <div className="roadmap-bullet">
+      <div className="phase-container">
+        <span>Phase</span>
+      </div>
+      <div className="description-container">
+        <span>{desc}</span>
+      </div>
+    </div>
+  );
+};
+interface RoadmapProps {
+  children: JSX.Element[];
+}
+
+const Roadmap: React.FC<RoadmapProps> = ({ children }) => {
+  return (
+    <section className="roadmap-container">
+      <h2>Roadmap</h2>
+        <ul>
+        {children.map((ele) => (
+          <li>{ele}</li>
+        ))}
+      </ul>
+    </section>
+  );
+};
 
 const Home = (props: HomeProps) => {
   const [balance, setBalance] = useState<number>();
@@ -166,24 +260,41 @@ const Home = (props: HomeProps) => {
   ]);
 
   return (
+    <>
+    <Header twitter={props.twitter} discord={props.discord}/>
     <main>
+      <Logo />
+      <img src="mockups.gif" alt="mockups gif" className="mockups-gif" />
+      <div className="collection-desc">
+        <p>
+          3333 unique Martianz NFTs, ready to inhibit the Solana Blockchain.
+        </p>
+        <p>
+          Martianz will strive to grow within this space as we land on our new
+          home within the Solana Blockchain.
+        </p>
+        <p>
+          Owning a Martianz is not just for the timeless artwork, it’s also
+          about being part of a community and sharing our passion for this new
+          industry of digital collectibles.
+        </p>
+        <p>Together we will colonize the space.</p>
+      </div>
+
       {wallet && (
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
       )}
 
       {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
 
-      {wallet && <p>Total Available: {itemsAvailable}</p>}
-
-      {wallet && <p>Redeemed: {itemsRedeemed}</p>}
-
-      {wallet && <p>Remaining: {itemsRemaining}</p>}
+      {wallet && <p className="remaining">{itemsRemaining}/{itemsAvailable} Remaining</p>}
 
       <MintContainer>
         {!wallet ? (
-          <ConnectButton>Connect Wallet</ConnectButton>
+          <ConnectButton style={{marginBottom: "5rem", backgroundColor: "var(--primary-light)"}}>Connect Wallet</ConnectButton>
         ) : (
           <MintButton
+          style={{marginBottom: "5rem", backgroundColor: "var(--primary-light)", color:"white"}}
             disabled={isSoldOut || isMinting || !isActive}
             onClick={onMint}
             variant="contained"
@@ -208,6 +319,13 @@ const Home = (props: HomeProps) => {
         )}
       </MintContainer>
 
+      <Roadmap>
+        <RoadmapBullet desc="Mint of 3333 Martianz" />
+        <RoadmapBullet desc="Marketplace Listings" />
+        <RoadmapBullet desc="Airdrops and Merchandise for holder" />
+        <RoadmapBullet desc="???" />
+      </Roadmap>
+
       <Snackbar
         open={alertState.open}
         autoHideDuration={6000}
@@ -221,6 +339,8 @@ const Home = (props: HomeProps) => {
         </Alert>
       </Snackbar>
     </main>
+    <Footer />
+    </>
   );
 };
 
