@@ -46,8 +46,6 @@ const txTimeout = 30000; // milliseconds (confirm this works for your project)
 const twitter = process.env.REACT_APP_TWITTER_LINK!;
 const discord = process.env.REACT_APP_DISCORD_INVITE_LINK!;
 
-console.log(twitter)
-
 const theme = createTheme({
     palette: {
         type: 'dark',

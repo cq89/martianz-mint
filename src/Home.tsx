@@ -130,6 +130,8 @@ const Roadmap: React.FC<RoadmapProps> = ({ children }) => {
   );
 };
 
+//all I need to do is parse date!
+
 const Home = (props: HomeProps) => {
   const [balance, setBalance] = useState<number>();
   const [isActive, setIsActive] = useState(false); // true when countdown completes
@@ -307,6 +309,8 @@ const Home = (props: HomeProps) => {
               ) : (
                 "MINT"
               )
+            ) : isNaN(startDate.getTime()) ? (
+              "Coming Soon"
             ) : (
               <Countdown
                 date={startDate}
