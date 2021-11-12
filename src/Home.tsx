@@ -309,7 +309,7 @@ const Home = (props: HomeProps) => {
               ) : (
                 "MINT"
               )
-            ) : isNaN(startDate.getTime()) ? (
+            ) : isNaN(startDate.getTime()) || true ? (
               "Coming Soon"
             ) : (
               <Countdown
