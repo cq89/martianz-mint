@@ -270,7 +270,7 @@ const Home = (props: HomeProps) => {
     <Header twitter={props.twitter} discord={props.discord}/>
     <main>
       <Logo />
-      <img src="main_alien.png" alt="mockups gif" className="mockups-gif" />
+      <img src="mainbanner.png" alt="mockups gif" className="mockups-gif" />
       <div className="collection-desc">
         <p>
           3333 unique Martianz NFTs, ready to inhibit the Solana Blockchain.
