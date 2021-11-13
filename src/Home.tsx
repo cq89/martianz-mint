@@ -276,15 +276,11 @@ const Home = (props: HomeProps) => {
           3333 unique Martianz NFTs, ready to inhibit the Solana Blockchain.
         </p>
         <p>
-          Martianz will strive to grow within this space as we land on our new
-          home within the Solana Blockchain.
+          Martianz are a collection of 3333 NFTs colonising on the Solana Blockchain.
+          As we land on our new home we will strive to build our community first and foremost. 
+          Future benefits such as airdrops and merchandise are just a part of what's to come as we dedicate 
+          towards bringing long term value for our holders.
         </p>
-        <p>
-          Owning a Martianz is not just for the timeless artwork, it’s also
-          about being part of a community and sharing our passion for this new
-          industry of digital collectibles.
-        </p>
-        <p>Together we will colonize the space.</p>
       </div>
 
       {wallet && (
@@ -330,7 +326,7 @@ const Home = (props: HomeProps) => {
       <Roadmap>
         <RoadmapBullet desc="Mint of 3333 Martianz" />
         <RoadmapBullet desc="Marketplace Listings" />
-        <RoadmapBullet desc="Airdrops and Merchandise for holder" />
+        <RoadmapBullet desc="Airdrops and Merchandise for holders" />
         <RoadmapBullet desc="???" />
       </Roadmap>
 
