@@ -277,9 +277,12 @@ const Home = (props: HomeProps) => {
         </p>
         <p>
           Martianz are a collection of 3333 NFTs colonising on the Solana Blockchain.
+          The alien inspired designs are all randomly generated accommodated with numerous 
+          traits based on different rarities.
+          
           As we land on our new home we will strive to build our community first and foremost. 
-          Future benefits such as airdrops and merchandise are just a part of what's to come as we dedicate 
-          towards bringing long term value for our holders.
+          Holders will get access to benefits, merchandise and more. Join us as we unite to bring
+          long term value within the space.
         </p>
       </div>
 
@@ -326,8 +329,8 @@ const Home = (props: HomeProps) => {
       <Roadmap>
         <RoadmapBullet desc="Mint of 3333 Martianz" />
         <RoadmapBullet desc="Marketplace Listings" />
-        <RoadmapBullet desc="Airdrops and Merchandise for holders" />
-        <RoadmapBullet desc="???" />
+        <RoadmapBullet desc="Members only exclusive advantages" />
+        <RoadmapBullet desc="More to come.." />
       </Roadmap>
 
       <Snackbar
