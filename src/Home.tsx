@@ -37,6 +37,7 @@ export interface HomeProps {
   txTimeout: number;
   twitter: string;
   discord: string;
+  comingSoon: boolean;
 }
 
 const Logo = () => {
@@ -294,7 +295,7 @@ const Home = (props: HomeProps) => {
 
       {wallet && <p className="remaining">{itemsRemaining}/{itemsAvailable} Remaining</p>}
 
-      {startDate && <MintContainer>
+      {props.comingSoon ? <div className="coming-soon">Coming Soon</div> : startDate && <MintContainer>
         {!wallet ? (
           <ConnectButton style={{marginBottom: "5rem", backgroundColor: "var(--primary-light)"}}>Connect Wallet</ConnectButton>
         ) : (

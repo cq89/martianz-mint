@@ -46,6 +46,8 @@ const txTimeout = 30000; // milliseconds (confirm this works for your project)
 const twitter = process.env.REACT_APP_TWITTER_LINK!;
 const discord = process.env.REACT_APP_DISCORD_INVITE_LINK!;
 
+const comingSoon = (process.env.REACT_APP_COMING_SOON! === "TRUE");
+
 const theme = createTheme({
     palette: {
         type: 'dark',
@@ -99,6 +101,7 @@ const App = () => {
                 txTimeout={txTimeout}
                 twitter={twitter}
                 discord={discord}
+                comingSoon={comingSoon}
               />
             </WalletDialogProvider>
           </WalletProvider>

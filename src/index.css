@@ -97,6 +97,13 @@ header .logo {
   color: var(--primary-text)
 }
 
+.coming-soon {
+  padding: 1rem 1.5rem;
+  margin: 2rem;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
 .remaining {
   margin-bottom: 1rem;
 }
