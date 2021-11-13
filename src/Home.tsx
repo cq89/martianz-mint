@@ -148,7 +148,8 @@ const Home = (props: HomeProps) => {
     severity: undefined,
   });
 
-  const [startDate, setStartDate] = useState(new Date(props.startDate));
+  const [startDate, setStartDate] = useState(new Date(props.startDate * 1000));
+  console.log(startDate.getTime())
 
   const wallet = useAnchorWallet();
   const [candyMachine, setCandyMachine] = useState<CandyMachine>();
@@ -156,6 +157,8 @@ const Home = (props: HomeProps) => {
   const refreshCandyMachineState = () => {
     (async () => {
       if (!wallet) return;
+
+      console.log('refreshing state!')
 
       const {
         candyMachine,
@@ -291,7 +294,7 @@ const Home = (props: HomeProps) => {
 
       {wallet && <p className="remaining">{itemsRemaining}/{itemsAvailable} Remaining</p>}
 
-      <MintContainer>
+      {startDate && <MintContainer>
         {!wallet ? (
           <ConnectButton style={{marginBottom: "5rem", backgroundColor: "var(--primary-light)"}}>Connect Wallet</ConnectButton>
         ) : (
@@ -309,7 +312,7 @@ const Home = (props: HomeProps) => {
               ) : (
                 "MINT"
               )
-            ) : isNaN(startDate.getTime()) || true ? (
+            ) : isNaN(startDate.getTime()) || startDate.getTime() - Date.now() > 63115200000 ? (
               "Coming Soon"
             ) : (
               <Countdown
@@ -321,7 +324,7 @@ const Home = (props: HomeProps) => {
             )}
           </MintButton>
         )}
-      </MintContainer>
+      </MintContainer>}
 
       <Roadmap>
         <RoadmapBullet desc="Mint of 3333 Martianz" />
