@@ -279,10 +279,18 @@ const Home = (props: HomeProps) => {
           Martianz are a collection of 3333 NFTs colonising on the Solana Blockchain.
           The alien inspired designs are all randomly generated accommodated with numerous 
           traits based on different rarities.
-          
+        </p>  
+        <p>
           As we land on our new home we will strive to build our community first and foremost. 
           Holders will get access to benefits, merchandise and more. Join us as we unite to bring
           long term value within the space.
+        </p>
+        <p>
+          FAQ's
+        </p>
+          How much will it cost to mint?
+        </p>
+          0.5 SOL
         </p>
       </div>
 
