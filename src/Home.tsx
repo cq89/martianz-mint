@@ -284,8 +284,8 @@ const Home = (props: HomeProps) => {
           Holders will get access to airdrops, exclusive benefits, merchandise and more. Join us as we unite to bring
           long term value within the space.
         </p>
-        <p>
-          <p style={{fontWeight: "bold"}}>
+        <p style={{fontWeight: "bold"}}>
+          FAQs
         </p>
         <p>
           How much will it cost to mint?
