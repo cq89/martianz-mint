@@ -272,7 +272,7 @@ const Home = (props: HomeProps) => {
       <Logo />
       <img src="mainbanner.png" alt="mockups gif" className="mockups-gif" />
       <div className="collection-desc">
-        <p>
+        <p style={{fontWeight: "bold"}}>
           3333 unique Martianz NFTs, ready to colonise the Solana Blockchain.
         </p>
         <p>
@@ -285,7 +285,7 @@ const Home = (props: HomeProps) => {
           long term value within the space.
         </p>
         <p>
-          FAQ's
+          <p style={{fontWeight: "bold"}}>
         </p>
         <p>
           How much will it cost to mint?
@@ -297,7 +297,7 @@ const Home = (props: HomeProps) => {
           When?
         </p>
         <p>
-          TBC. Check back here or keep up with our socials
+          TBD. Check back here or keep up with our socials
         </p>
         <p>
           For any inquiries, reach out to our inbox on Twitter
