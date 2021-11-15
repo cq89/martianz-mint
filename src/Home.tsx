@@ -288,8 +288,10 @@ const Home = (props: HomeProps) => {
         <p>
           FAQ's
         </p>
+        <p>
           How much will it cost to mint?
         </p>
+        <p>
           0.5 SOL
         </p>
       </div>
