@@ -273,16 +273,15 @@ const Home = (props: HomeProps) => {
       <img src="mainbanner.png" alt="mockups gif" className="mockups-gif" />
       <div className="collection-desc">
         <p>
-          3333 unique Martianz NFTs, ready to inhibit the Solana Blockchain.
+          3333 unique Martianz NFTs, ready to colonise the Solana Blockchain.
         </p>
         <p>
-          Martianz are a collection of 3333 NFTs colonising on the Solana Blockchain.
           The alien inspired designs are all randomly generated accommodated with numerous 
           traits based on different rarities.
         </p>  
         <p>
           As we land on our new home we will strive to build our community first and foremost. 
-          Holders will get access to benefits, merchandise and more. Join us as we unite to bring
+          Holders will get access to airdrops, exclusive benefits, merchandise and more. Join us as we unite to bring
           long term value within the space.
         </p>
         <p>
@@ -293,6 +292,15 @@ const Home = (props: HomeProps) => {
         </p>
         <p>
           0.5 SOL
+        </p>
+        <p>
+          When?
+        </p>
+        <p>
+          TBC. Check back here or keep up with our socials
+        </p>
+        <p>
+          For any inquiries, reach out to our inbox on Twitter
         </p>
       </div>
 
