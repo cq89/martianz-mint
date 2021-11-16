@@ -291,7 +291,7 @@ const Home = (props: HomeProps) => {
         <p style={{fontWeight: "bold"}}>
           FAQs
         </p>
-        <p style="text-decoration: underline;">
+        <p>
           How much will it cost to mint?
         </p>
         <p>
