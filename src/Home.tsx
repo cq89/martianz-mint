@@ -284,6 +284,10 @@ const Home = (props: HomeProps) => {
           Holders will get access to airdrops, exclusive benefits, merchandise and more. Join us as we unite to bring
           long term value within the space.
         </p>
+        <p>
+          3% of all sales will go into a community wallet and will go towards the evolution of the society.
+          Martianz will be able to come together and make decisions on how these $SOL will be used through a voting system.
+        </p>
         <p style={{fontWeight: "bold"}}>
           FAQs
         </p>
