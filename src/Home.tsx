@@ -273,7 +273,7 @@ const Home = (props: HomeProps) => {
       <img src="mainbanner.png" alt="mockups gif" className="mockups-gif" />
       <div className="collection-desc">
         <p style={{fontWeight: "bold"}}>
-          3333 unique Martianz NFTs, ready to colonise the Solana Blockchain.
+          5555 unique Martianz NFTs, ready to colonise the Ethereum Blockchain.
         </p>
         <p>
           The alien inspired designs are all randomly generated accommodated with numerous 
@@ -285,8 +285,8 @@ const Home = (props: HomeProps) => {
           long term value within the space.
         </p>
         <p>
-          3% of all sales will go into a community wallet and will go towards the evolution of the society.
-          Martianz will be able to come together and make decisions on how these $SOL will be used through a voting system.
+          50% of all sales from mint will go into a community wallet and will go towards the evolution of the society.
+          Martianz will be able to come together and make decisions on how these funds will be used through a voting system.
         </p>
         <p style={{fontWeight: "bold"}}>
           FAQs
@@ -349,9 +349,9 @@ const Home = (props: HomeProps) => {
       </MintContainer>}
 
       <Roadmap>
-        <RoadmapBullet desc="Mint of 3333 Martianz" />
-        <RoadmapBullet desc="Marketplace Listings" />
-        <RoadmapBullet desc="Members only exclusive advantages" />
+        <RoadmapBullet desc="Mint of 5555 Martianz" />
+        <RoadmapBullet desc="Access to the Martianz Alpha which provides tools and more for your NFT journey" />
+        <RoadmapBullet desc="Merch both physical and digital, building out the Martianz world" />
         <RoadmapBullet desc="More to come.." />
       </Roadmap>
 
