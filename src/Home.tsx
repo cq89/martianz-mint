@@ -295,7 +295,7 @@ const Home = (props: HomeProps) => {
           How much will it cost to mint?
         </p>
         <p>
-          0.5 SOL
+          0.05 ETH
         </p>
         <p>
           When?
