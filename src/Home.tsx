@@ -295,16 +295,19 @@ const Home = (props: HomeProps) => {
           How much will it cost to mint?
         </p>
         <p>
-          0.05 ETH
+          Absolutely nothing, FREE
         </p>
         <p>
           When?
         </p>
         <p>
-          TBD. Check back here or keep up with our socials
+          Follow our Twitter for updates (turn on notifications)
         </p>
         <p>
-          For any inquiries, reach out to our inbox on Twitter
+          How to mint?
+        </p>
+        <p>
+          The contract address will be displayed here when the mint is live!
         </p>
       </div>
 
